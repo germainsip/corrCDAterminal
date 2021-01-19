@@ -27,8 +27,10 @@ public class Main {
         System.out.println("Entrez un mot: ");
         //réglons le problème avec le Scanner
         sc.nextLine();
-        mot = sc.nextLine();
-        for (char a : mot.toCharArray()) nbVoyelles = (VOYELLES.indexOf(a) > 0) ? (nbVoyelles + 1) : nbVoyelles;
+        mot = sc.nextLine().toLowerCase();
+        for (char a : mot.toCharArray()) {
+            nbVoyelles = (VOYELLES.indexOf(a) > 0) ? (nbVoyelles + 1) : nbVoyelles;
+        }
 
         System.out.printf("Il y a %d voyelle(s) dans %s.",nbVoyelles,mot);
 
